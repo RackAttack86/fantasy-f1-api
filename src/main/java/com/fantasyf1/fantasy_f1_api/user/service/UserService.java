@@ -1,5 +1,7 @@
 package com.REDACTED.fantasy_f1_api.user.service;
 
+import com.REDACTED.fantasy_f1_api.common.exception.DuplicateResourceException;
+import com.REDACTED.fantasy_f1_api.common.exception.ResourceNotFoundException;
 import com.REDACTED.fantasy_f1_api.user.dto.CreateUserRequest;
 import com.REDACTED.fantasy_f1_api.user.dto.UserResponse;
 import com.REDACTED.fantasy_f1_api.user.entity.User;
@@ -23,7 +25,7 @@ public class UserService {
     @Transactional
     public UserResponse createUser(CreateUserRequest request) {
         if (userRepository.existsByEmail(request.getEmail())) {
-            throw new IllegalArgumentException("Email already exists");
+            throw new DuplicateResourceException("User", "email", request.getEmail());
         }
 
         User user = User.builder()
@@ -38,7 +40,8 @@ public class UserService {
 
     @Transactional(readOnly = true) // Optimizes read queries
     public UserResponse getUserById(UUID id) {
-        User user = userRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("User not found."));
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("User", "id", id));
         return userMapper.toResponse(user);
     }
 }
