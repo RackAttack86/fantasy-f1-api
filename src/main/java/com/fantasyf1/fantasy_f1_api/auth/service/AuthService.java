@@ -38,8 +38,8 @@ public class AuthService {
         // Step 4: Return response with token details
         return AuthResponse.builder()
                 .token(token)
-                .tokenType("Bearer")
-                .expiresIn(jwtProperties.getExpiration())
+                .tokenType("Bearer") // Standard token type for HTTP Authorization header
+                .expiresIn(jwtProperties.getExpiration()) // Tell client when token expires
                 .build();
     }
 }
