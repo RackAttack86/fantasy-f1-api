@@ -1,0 +1,81 @@
+Request Flow Summary
+
+1. POST /api/v1/auth/login
+    ↓
+2. JwtAuthenticationFilter: No token? Continue without auth
+    ↓
+3. SecurityConfig: /api/v1/auth/** is permitAll()
+    ↓
+4. AuthController.login()
+    ↓
+5. AuthService.login() -> validate credentials -> generate JWT
+    ↓
+6. Return token to client
+
+---
+
+7. GET /api/v1/users/{id} with "Authorization: Bearer <token>"
+    ↓
+8. JwtAuthenticationFilter: Token found -> validate -> set SecurityContext
+    ↓
+9. SecurityConfig: anyRequest().authenticated() -> SecurityContext
+    ↓
+10. UserController.getUserById() executes
+
+Key Point: The filter acts as a gatekeeper. By the time your controller code runs,
+authentication has already verified. The controller trusts that if it's executing, the
+user is authenticated.
+
+===============================
+How routing works from a HTTP request
+
+What controls routing
+    Spring's DispatcherServlet is the central controller that routes all HTTP requests.
+    It uses annotations on your controller to determine where to send requests.
+
+How the routing works
+    GET api/v1/users/{id}
+
+    Step 1: Class-level @RequestMapping
+    @RestController
+    @RequestMapping("/api/v1/users")   ← Matches "/api/v1/users" prefix
+    public class UserController {
+
+    Step 2: Method-level @GetMapping
+    @GetMapping("/{id}")               ← Matches "/{id}" suffix + GET method
+    public ResponseEntity<UserResponse> getUser(@PathVariable UUID id) {
+
+    Combined: GET + /api/v1/users + /{id} = GET /api/v1/users/{id}
+
+    Routing Table
+
+    Your app currently has these routes:
+
+    | HTTP Method | Path               | Controller Method           | Auth Required |
+    |-------------|--------------------|-----------------------------|---------------|
+    | POST        | /api/v1/users      | UserController.createUser() | No            |
+    | GET         | /api/v1/users/{id} | UserController.getUser()    | Yes           |
+    | POST        | /api/v1/auth/login | AuthController.login()      | No            |
+
+    The {id} Path Variable
+
+Full Request Journey
+
+ GET /api/v1/users/74021a4c-1d18-43f7-bfad-3204b42458d6
+  Authorization: Bearer eyJhbG...
+
+  1. Tomcat receives request
+        ↓
+  2. JwtAuthenticationFilter (validates token)
+        ↓
+  3. SecurityConfig (checks authentication)
+        ↓
+  4. DispatcherServlet (routing)
+    - Scans all @RestController classes
+    - Finds UserController matches "/api/v1/users"
+    - Finds getUser() matches GET + "/{id}"
+        ↓
+  5. UserController.getUser(UUID id)
+    - id = 74021a4c-1d18-43f7-bfad-3204b42458d6
+        ↓
+  6. Response returned

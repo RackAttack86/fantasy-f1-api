@@ -33,3 +33,16 @@ Content-Type: application/json
 
 ### Test user not found (should return 404)
 GET http://localhost:8080/api/v1/users/00000000-0000-0000-0000-000000000000
+
+### Login
+POST http://localhost:8080/api/v1/auth/login
+Content-Type: application/json
+
+{
+    "email": "charles@ferrari.com",
+    "password": "your-test-password-here"
+}
+
+### Get User with Token (replace <token> with actual JWT)
+GET http://localhost:8080/api/v1/users/74021a4c-1d18-43f7-bfad-3204b42458d6
+Authorization: Bearer <token>

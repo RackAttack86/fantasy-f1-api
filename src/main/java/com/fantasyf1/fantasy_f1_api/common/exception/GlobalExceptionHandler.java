@@ -73,6 +73,22 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(error);
     }
 
+    @ExceptionHandler(BadCredentialsException.class)
+    public ResponseEntity<ErrorResponse> handleBadCredentials(
+            BadCredentialsException ex,
+            HttpServletRequest request) {
+
+        ErrorResponse error = ErrorResponse.builder()
+            .timestamp(Instant.now())
+            .status(HttpStatus.UNAUTHORIZED.value())
+            .message(ex.getMessage())
+            .path(request.getRequestURI())
+            .build();
+
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(error);
+    }
+    
+
     @ExceptionHandler(Exception.class) // Catch-all handler ensures a stack trace is never leaked.
     public ResponseEntity<ErrorResponse> handleAllOtherExceptions(
             Exception ex,
