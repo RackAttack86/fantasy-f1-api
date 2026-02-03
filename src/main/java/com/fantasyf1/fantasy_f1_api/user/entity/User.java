@@ -1,4 +1,4 @@
-package com.REDACTED.fantasy_f1_api.user.entity;
+package com.fantasyf1.fantasy_f1_api.user.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

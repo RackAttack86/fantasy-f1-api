@@ -1,12 +1,12 @@
-package com.REDACTED.fantasy_f1_api.user.service;
+package com.fantasyf1.fantasy_f1_api.user.service;
 
-import com.REDACTED.fantasy_f1_api.common.exception.DuplicateResourceException;
-import com.REDACTED.fantasy_f1_api.common.exception.ResourceNotFoundException;
-import com.REDACTED.fantasy_f1_api.user.dto.CreateUserRequest;
-import com.REDACTED.fantasy_f1_api.user.dto.UserResponse;
-import com.REDACTED.fantasy_f1_api.user.entity.User;
-import com.REDACTED.fantasy_f1_api.user.mapper.UserMapper;
-import com.REDACTED.fantasy_f1_api.user.repository.UserRepository;
+import com.fantasyf1.fantasy_f1_api.common.exception.DuplicateResourceException;
+import com.fantasyf1.fantasy_f1_api.common.exception.ResourceNotFoundException;
+import com.fantasyf1.fantasy_f1_api.user.dto.CreateUserRequest;
+import com.fantasyf1.fantasy_f1_api.user.dto.UserResponse;
+import com.fantasyf1.fantasy_f1_api.user.entity.User;
+import com.fantasyf1.fantasy_f1_api.user.mapper.UserMapper;
+import com.fantasyf1.fantasy_f1_api.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

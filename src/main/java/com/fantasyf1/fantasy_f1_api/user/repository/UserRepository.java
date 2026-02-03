@@ -1,6 +1,6 @@
-package com.REDACTED.fantasy_f1_api.user.repository;
+package com.fantasyf1.fantasy_f1_api.user.repository;
 
-import com.REDACTED.fantasy_f1_api.user.entity.User;
+import com.fantasyf1.fantasy_f1_api.user.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

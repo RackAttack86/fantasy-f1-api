@@ -1,7 +1,7 @@
-package com.REDACTED.fantasy_f1_api.user.mapper;
+package com.fantasyf1.fantasy_f1_api.user.mapper;
 
-import com.REDACTED.fantasy_f1_api.user.dto.UserResponse;
-import com.REDACTED.fantasy_f1_api.user.entity.User;
+import com.fantasyf1.fantasy_f1_api.user.dto.UserResponse;
+import com.fantasyf1.fantasy_f1_api.user.entity.User;
 import org.springframework.stereotype.Component;
 
 @Component

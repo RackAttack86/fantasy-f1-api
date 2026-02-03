@@ -1,6 +1,6 @@
-package com.REDACTED.fantasy_f1_api.common.security;
+package com.fantasyf1.fantasy_f1_api.common.security;
 
-import com.REDACTED.fantasy_f1_api.config.JwtProperties;
+import com.fantasyf1.fantasy_f1_api.config.JwtProperties;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;

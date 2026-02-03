@@ -1,11 +1,11 @@
-package com.REDACTED.fantasy_f1_api.user.controller;
+package com.fantasyf1.fantasy_f1_api.user.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.REDACTED.fantasy_f1_api.user.dto.CreateUserRequest;
-import com.REDACTED.fantasy_f1_api.user.dto.UserResponse;
-import com.REDACTED.fantasy_f1_api.user.service.UserService;
+import com.fantasyf1.fantasy_f1_api.user.dto.CreateUserRequest;
+import com.fantasyf1.fantasy_f1_api.user.dto.UserResponse;
+import com.fantasyf1.fantasy_f1_api.user.service.UserService;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

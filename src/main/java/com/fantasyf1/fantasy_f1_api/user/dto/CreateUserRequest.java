@@ -1,4 +1,4 @@
-package com.REDACTED.fantasy_f1_api.user.dto;
+package com.fantasyf1.fantasy_f1_api.user.dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

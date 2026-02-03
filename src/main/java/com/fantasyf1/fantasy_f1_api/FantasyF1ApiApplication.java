@@ -1,4 +1,4 @@
-package com.REDACTED.fantasy_f1_api;
+package com.fantasyf1.fantasy_f1_api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.REDACTED.fantasy_f1_api.common.exception;
+package com.fantasyf1.fantasy_f1_api.common.exception;
 
 public class ResourceNotFoundException extends RuntimeException {
 

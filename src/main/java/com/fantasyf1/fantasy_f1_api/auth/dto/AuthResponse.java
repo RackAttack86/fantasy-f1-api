@@ -1,4 +1,4 @@
-package com.REDACTED.fantasy_f1_api.auth.dto;
+package com.fantasyf1.fantasy_f1_api.auth.dto;
 
 import lombok.Builder;
 import lombok.Data;
