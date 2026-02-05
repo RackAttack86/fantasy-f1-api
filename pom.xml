@@ -8,7 +8,7 @@
 		<version>4.0.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.REDACTED</groupId>
+	<groupId>com.fantasyf1</groupId>
 	<artifactId>fantasy-f1-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>fantasy-f1-api</name>
