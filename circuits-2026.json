@@ -1,0 +1,194 @@
+[
+  {
+    "name": "Albert Park Circuit",
+    "location": "Melbourne",
+    "country": "Australia",
+    "lengthKm": 5.278,
+    "numberOfLaps": 58,
+    "firstGrandPrixYear": 1996
+  },
+  {
+    "name": "Shanghai International Circuit",
+    "location": "Shanghai",
+    "country": "China",
+    "lengthKm": 5.451,
+    "numberOfLaps": 56,
+    "firstGrandPrixYear": 2004
+  },
+  {
+    "name": "Suzuka Circuit",
+    "location": "Suzuka",
+    "country": "Japan",
+    "lengthKm": 5.807,
+    "numberOfLaps": 53,
+    "firstGrandPrixYear": 1987
+  },
+  {
+    "name": "Bahrain International Circuit",
+    "location": "Sakhir",
+    "country": "Bahrain",
+    "lengthKm": 5.412,
+    "numberOfLaps": 57,
+    "firstGrandPrixYear": 2004
+  },
+  {
+    "name": "Jeddah Corniche Circuit",
+    "location": "Jeddah",
+    "country": "Saudi Arabia",
+    "lengthKm": 6.174,
+    "numberOfLaps": 50,
+    "firstGrandPrixYear": 2021
+  },
+  {
+    "name": "Miami International Autodrome",
+    "location": "Miami",
+    "country": "United States",
+    "lengthKm": 5.410,
+    "numberOfLaps": 57,
+    "firstGrandPrixYear": 2022
+  },
+  {
+    "name": "Circuit Gilles Villeneuve",
+    "location": "Montreal",
+    "country": "Canada",
+    "lengthKm": 4.361,
+    "numberOfLaps": 70,
+    "firstGrandPrixYear": 1978
+  },
+  {
+    "name": "Circuit de Monaco",
+    "location": "Monte Carlo",
+    "country": "Monaco",
+    "lengthKm": 3.337,
+    "numberOfLaps": 78,
+    "firstGrandPrixYear": 1950
+  },
+  {
+    "name": "Circuit de Barcelona-Catalunya",
+    "location": "Barcelona",
+    "country": "Spain",
+    "lengthKm": 4.675,
+    "numberOfLaps": 66,
+    "firstGrandPrixYear": 1991
+  },
+  {
+    "name": "Red Bull Ring",
+    "location": "Spielberg",
+    "country": "Austria",
+    "lengthKm": 4.318,
+    "numberOfLaps": 71,
+    "firstGrandPrixYear": 1970
+  },
+  {
+    "name": "Silverstone Circuit",
+    "location": "Silverstone",
+    "country": "United Kingdom",
+    "lengthKm": 5.891,
+    "numberOfLaps": 52,
+    "firstGrandPrixYear": 1950
+  },
+  {
+    "name": "Circuit de Spa-Francorchamps",
+    "location": "Spa",
+    "country": "Belgium",
+    "lengthKm": 7.004,
+    "numberOfLaps": 44,
+    "firstGrandPrixYear": 1950
+  },
+  {
+    "name": "Hungaroring",
+    "location": "Budapest",
+    "country": "Hungary",
+    "lengthKm": 4.381,
+    "numberOfLaps": 70,
+    "firstGrandPrixYear": 1986
+  },
+  {
+    "name": "Circuit Zandvoort",
+    "location": "Zandvoort",
+    "country": "Netherlands",
+    "lengthKm": 4.259,
+    "numberOfLaps": 72,
+    "firstGrandPrixYear": 1952
+  },
+  {
+    "name": "Autodromo Nazionale Monza",
+    "location": "Monza",
+    "country": "Italy",
+    "lengthKm": 5.793,
+    "numberOfLaps": 53,
+    "firstGrandPrixYear": 1950
+  },
+  {
+    "name": "Circuito de Madrid",
+    "location": "Madrid",
+    "country": "Spain",
+    "lengthKm": 5.470,
+    "numberOfLaps": 57,
+    "firstGrandPrixYear": 2026
+  },
+  {
+    "name": "Baku City Circuit",
+    "location": "Baku",
+    "country": "Azerbaijan",
+    "lengthKm": 6.003,
+    "numberOfLaps": 51,
+    "firstGrandPrixYear": 2016
+  },
+  {
+    "name": "Marina Bay Street Circuit",
+    "location": "Singapore",
+    "country": "Singapore",
+    "lengthKm": 5.063,
+    "numberOfLaps": 61,
+    "firstGrandPrixYear": 2008
+  },
+  {
+    "name": "Circuit of the Americas",
+    "location": "Austin",
+    "country": "United States",
+    "lengthKm": 5.513,
+    "numberOfLaps": 56,
+    "firstGrandPrixYear": 2012
+  },
+  {
+    "name": "Autodromo Hermanos Rodriguez",
+    "location": "Mexico City",
+    "country": "Mexico",
+    "lengthKm": 4.304,
+    "numberOfLaps": 71,
+    "firstGrandPrixYear": 1963
+  },
+  {
+    "name": "Autodromo Jose Carlos Pace",
+    "location": "Sao Paulo",
+    "country": "Brazil",
+    "lengthKm": 4.309,
+    "numberOfLaps": 71,
+    "firstGrandPrixYear": 1973
+  },
+  {
+    "name": "Las Vegas Strip Circuit",
+    "location": "Las Vegas",
+    "country": "United States",
+    "lengthKm": 6.201,
+    "numberOfLaps": 50,
+    "firstGrandPrixYear": 2023
+  },
+  {
+    "name": "Lusail International Circuit",
+    "location": "Lusail",
+    "country": "Qatar",
+    "lengthKm": 5.419,
+    "numberOfLaps": 57,
+    "firstGrandPrixYear": 2021
+  },
+  {
+    "name": "Yas Marina Circuit",
+    "location": "Abu Dhabi",
+    "country": "United Arab Emirates",
+    "lengthKm": 5.281,
+    "numberOfLaps": 55,
+    "firstGrandPrixYear": 2009
+  }
+]

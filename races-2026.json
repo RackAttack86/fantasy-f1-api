@@ -1,0 +1,218 @@
+[
+  {
+    "name": "Australian Grand Prix",
+    "season": 2026,
+    "round": 1,
+    "circuitName": "Albert Park Circuit",
+    "raceDate": "2026-03-08",
+    "qualifyingDate": "2026-03-07",
+    "sprintDate": null
+  },
+  {
+    "name": "Chinese Grand Prix",
+    "season": 2026,
+    "round": 2,
+    "circuitName": "Shanghai International Circuit",
+    "raceDate": "2026-03-15",
+    "qualifyingDate": "2026-03-13",
+    "sprintDate": "2026-03-14"
+  },
+  {
+    "name": "Japanese Grand Prix",
+    "season": 2026,
+    "round": 3,
+    "circuitName": "Suzuka Circuit",
+    "raceDate": "2026-03-29",
+    "qualifyingDate": "2026-03-28",
+    "sprintDate": null
+  },
+  {
+    "name": "Bahrain Grand Prix",
+    "season": 2026,
+    "round": 4,
+    "circuitName": "Bahrain International Circuit",
+    "raceDate": "2026-04-12",
+    "qualifyingDate": "2026-04-11",
+    "sprintDate": null
+  },
+  {
+    "name": "Saudi Arabian Grand Prix",
+    "season": 2026,
+    "round": 5,
+    "circuitName": "Jeddah Corniche Circuit",
+    "raceDate": "2026-04-19",
+    "qualifyingDate": "2026-04-18",
+    "sprintDate": null
+  },
+  {
+    "name": "Miami Grand Prix",
+    "season": 2026,
+    "round": 6,
+    "circuitName": "Miami International Autodrome",
+    "raceDate": "2026-05-03",
+    "qualifyingDate": "2026-05-01",
+    "sprintDate": "2026-05-02"
+  },
+  {
+    "name": "Canadian Grand Prix",
+    "season": 2026,
+    "round": 7,
+    "circuitName": "Circuit Gilles Villeneuve",
+    "raceDate": "2026-05-24",
+    "qualifyingDate": "2026-05-22",
+    "sprintDate": "2026-05-23"
+  },
+  {
+    "name": "Monaco Grand Prix",
+    "season": 2026,
+    "round": 8,
+    "circuitName": "Circuit de Monaco",
+    "raceDate": "2026-06-07",
+    "qualifyingDate": "2026-06-06",
+    "sprintDate": null
+  },
+  {
+    "name": "Spanish Grand Prix",
+    "season": 2026,
+    "round": 9,
+    "circuitName": "Circuit de Barcelona-Catalunya",
+    "raceDate": "2026-06-14",
+    "qualifyingDate": "2026-06-13",
+    "sprintDate": null
+  },
+  {
+    "name": "Austrian Grand Prix",
+    "season": 2026,
+    "round": 10,
+    "circuitName": "Red Bull Ring",
+    "raceDate": "2026-06-28",
+    "qualifyingDate": "2026-06-27",
+    "sprintDate": null
+  },
+  {
+    "name": "British Grand Prix",
+    "season": 2026,
+    "round": 11,
+    "circuitName": "Silverstone Circuit",
+    "raceDate": "2026-07-05",
+    "qualifyingDate": "2026-07-03",
+    "sprintDate": "2026-07-04"
+  },
+  {
+    "name": "Belgian Grand Prix",
+    "season": 2026,
+    "round": 12,
+    "circuitName": "Circuit de Spa-Francorchamps",
+    "raceDate": "2026-07-19",
+    "qualifyingDate": "2026-07-18",
+    "sprintDate": null
+  },
+  {
+    "name": "Hungarian Grand Prix",
+    "season": 2026,
+    "round": 13,
+    "circuitName": "Hungaroring",
+    "raceDate": "2026-07-26",
+    "qualifyingDate": "2026-07-25",
+    "sprintDate": null
+  },
+  {
+    "name": "Dutch Grand Prix",
+    "season": 2026,
+    "round": 14,
+    "circuitName": "Circuit Zandvoort",
+    "raceDate": "2026-08-23",
+    "qualifyingDate": "2026-08-21",
+    "sprintDate": "2026-08-22"
+  },
+  {
+    "name": "Italian Grand Prix",
+    "season": 2026,
+    "round": 15,
+    "circuitName": "Autodromo Nazionale Monza",
+    "raceDate": "2026-09-06",
+    "qualifyingDate": "2026-09-05",
+    "sprintDate": null
+  },
+  {
+    "name": "Madrid Grand Prix",
+    "season": 2026,
+    "round": 16,
+    "circuitName": "Circuito de Madrid",
+    "raceDate": "2026-09-13",
+    "qualifyingDate": "2026-09-12",
+    "sprintDate": null
+  },
+  {
+    "name": "Azerbaijan Grand Prix",
+    "season": 2026,
+    "round": 17,
+    "circuitName": "Baku City Circuit",
+    "raceDate": "2026-09-26",
+    "qualifyingDate": "2026-09-25",
+    "sprintDate": null
+  },
+  {
+    "name": "Singapore Grand Prix",
+    "season": 2026,
+    "round": 18,
+    "circuitName": "Marina Bay Street Circuit",
+    "raceDate": "2026-10-11",
+    "qualifyingDate": "2026-10-09",
+    "sprintDate": "2026-10-10"
+  },
+  {
+    "name": "United States Grand Prix",
+    "season": 2026,
+    "round": 19,
+    "circuitName": "Circuit of the Americas",
+    "raceDate": "2026-10-25",
+    "qualifyingDate": "2026-10-24",
+    "sprintDate": null
+  },
+  {
+    "name": "Mexico City Grand Prix",
+    "season": 2026,
+    "round": 20,
+    "circuitName": "Autodromo Hermanos Rodriguez",
+    "raceDate": "2026-11-01",
+    "qualifyingDate": "2026-10-31",
+    "sprintDate": null
+  },
+  {
+    "name": "Brazilian Grand Prix",
+    "season": 2026,
+    "round": 21,
+    "circuitName": "Autodromo Jose Carlos Pace",
+    "raceDate": "2026-11-08",
+    "qualifyingDate": "2026-11-07",
+    "sprintDate": null
+  },
+  {
+    "name": "Las Vegas Grand Prix",
+    "season": 2026,
+    "round": 22,
+    "circuitName": "Las Vegas Strip Circuit",
+    "raceDate": "2026-11-21",
+    "qualifyingDate": "2026-11-20",
+    "sprintDate": null
+  },
+  {
+    "name": "Qatar Grand Prix",
+    "season": 2026,
+    "round": 23,
+    "circuitName": "Lusail International Circuit",
+    "raceDate": "2026-11-29",
+    "qualifyingDate": "2026-11-28",
+    "sprintDate": null
+  },
+  {
+    "name": "Abu Dhabi Grand Prix",
+    "season": 2026,
+    "round": 24,
+    "circuitName": "Yas Marina Circuit",
+    "raceDate": "2026-12-06",
+    "qualifyingDate": "2026-12-05",
+    "sprintDate": null
+  }
+]

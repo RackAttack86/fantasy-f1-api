@@ -30,6 +30,16 @@
 			"key": "driver_id",
 			"value": "",
 			"type": "string"
+		},
+		{
+			"key": "circuit_id",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "race_id",
+			"value": "",
+			"type": "string"
 		}
 	],
 	"item": [
@@ -561,6 +571,426 @@
 							"raw": "{{base_url}}/drivers/{{driver_id}}",
 							"host": ["{{base_url}}"],
 							"path": ["drivers", "{{driver_id}}"]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Circuits",
+			"item": [
+				{
+					"name": "Create Circuit",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if (pm.response.code === 201 || pm.response.code === 200) {",
+									"    const response = pm.response.json();",
+									"    if (response.id) {",
+									"        pm.collectionVariables.set('circuit_id', response.id);",
+									"        console.log('Circuit ID saved: ' + response.id);",
+									"    }",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Monaco\",\n    \"location\": \"Monte Carlo\",\n    \"country\": \"Monaco\",\n    \"lengthKm\": 3.337,\n    \"numberOfLaps\": 78,\n    \"firstGrandPrixYear\": 1950\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/circuits",
+							"host": ["{{base_url}}"],
+							"path": ["circuits"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Circuits",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/circuits",
+							"host": ["{{base_url}}"],
+							"path": ["circuits"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Circuits by Country",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/circuits?country=Monaco",
+							"host": ["{{base_url}}"],
+							"path": ["circuits"],
+							"query": [
+								{
+									"key": "country",
+									"value": "Monaco"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Circuit by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/circuits/{{circuit_id}}",
+							"host": ["{{base_url}}"],
+							"path": ["circuits", "{{circuit_id}}"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Circuit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"numberOfLaps\": 80\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/circuits/{{circuit_id}}",
+							"host": ["{{base_url}}"],
+							"path": ["circuits", "{{circuit_id}}"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Circuit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/circuits/{{circuit_id}}",
+							"host": ["{{base_url}}"],
+							"path": ["circuits", "{{circuit_id}}"]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Races",
+			"item": [
+				{
+					"name": "Create Race",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if (pm.response.code === 201 || pm.response.code === 200) {",
+									"    const response = pm.response.json();",
+									"    if (response.id) {",
+									"        pm.collectionVariables.set('race_id', response.id);",
+									"        console.log('Race ID saved: ' + response.id);",
+									"    }",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Australian Grand Prix\",\n    \"season\": 2026,\n    \"round\": 1,\n    \"circuitId\": \"{{circuit_id}}\",\n    \"raceDate\": \"2026-03-08\",\n    \"qualifyingDate\": \"2026-03-07\",\n    \"sprintDate\": null\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/races",
+							"host": ["{{base_url}}"],
+							"path": ["races"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Races",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/races",
+							"host": ["{{base_url}}"],
+							"path": ["races"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Races by Season",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/races?season=2026",
+							"host": ["{{base_url}}"],
+							"path": ["races"],
+							"query": [
+								{
+									"key": "season",
+									"value": "2026"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Races by Circuit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/races?circuitId={{circuit_id}}",
+							"host": ["{{base_url}}"],
+							"path": ["races"],
+							"query": [
+								{
+									"key": "circuitId",
+									"value": "{{circuit_id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Race by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/races/{{race_id}}",
+							"host": ["{{base_url}}"],
+							"path": ["races", "{{race_id}}"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Race by Season and Round",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/races/season/2026/round/1",
+							"host": ["{{base_url}}"],
+							"path": ["races", "season", "2026", "round", "1"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Race",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Updated Grand Prix Name\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/races/{{race_id}}",
+							"host": ["{{base_url}}"],
+							"path": ["races", "{{race_id}}"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Race",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/races/{{race_id}}",
+							"host": ["{{base_url}}"],
+							"path": ["races", "{{race_id}}"]
 						}
 					},
 					"response": []
