@@ -13,20 +13,20 @@ import java.math.BigDecimal;
 import java.time.Instant;
 import java.util.UUID;
 
-@Entity
-@Table(name = "race_results")
-@Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
+@Entity // Marks this class as a JPA entity that will be mapped to a database table. Required for hibernate to manage this class.
+@Table(name = "race_results") // Specifies the exact database table name. Without this, JPA would use the class name (RaceResult) which might not match your table.
+@Data // Lombok annotation that generates getters, setters, equals(), hashcode(), and toString() methods automatically. Reduces boilerplate code.
+@Builder // Lombok annotation that implements the builder pattern, allowing fluent object construction
+@NoArgsConstructor // Lombok annotation generates a no-argument constructor. **Required by JPA** - Hibernate needs this to instantiate entities when loading from database
+@AllArgsConstructor // Lombok generates a constructor with all fields. Used by the builder pattern internally.
 public class RaceResult {
     
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "race_id", nullable = false)
+    @ManyToOne(fetch = FetchType.LAZY) // Defines a many-to-one relationship. 'LAZY' means the related entity (Race/Driver/Team) is NOT loaded until accessed. Prevents N+1 query problems.
+    @JoinColumn(name = "race_id", nullable = false) // Specifies the foreign key column name.
     private Race race;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -67,7 +67,7 @@ public class RaceResult {
     @Column(name = "updated_at", nullable = false)
     private Instant updatedAt;
 
-    @PrePersist
+    @PrePersist // JPA lifecycle callback - method runs automatically BEFORE entity is first saved to database. Used to set default values and timestamps
     protected void onCreate(){
         createdAt = Instant.now();
         updatedAt = Instant.now();
@@ -82,7 +82,7 @@ public class RaceResult {
         }
     }
 
-    @PreUpdate
+    @PreUpdate // JPA lifecycle callback - method runs automatically BEFORE entity is updated. Used to update the 'updatedAt' timestamp
     protected void onUpdate(){
         updatedAt = Instant.now();
     }
