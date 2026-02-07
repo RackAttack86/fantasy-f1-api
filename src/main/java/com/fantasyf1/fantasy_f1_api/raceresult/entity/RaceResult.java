@@ -1,5 +1,7 @@
 package com.fantasyf1.fantasy_f1_api.raceresult.entity;
 
+// **Purpose:** JPA entity that maps to the 'race_results' database table. Represents a single driver's complete result for a race weekend.
+
 import com.fantasyf1.fantasy_f1_api.driver.entity.Driver;
 import com.fantasyf1.fantasy_f1_api.race.entity.Race;
 import com.fantasyf1.fantasy_f1_api.team.entity.Team;

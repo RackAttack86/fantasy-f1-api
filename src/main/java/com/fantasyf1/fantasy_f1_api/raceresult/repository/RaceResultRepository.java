@@ -1,5 +1,7 @@
 package com.fantasyf1.fantasy_f1_api.raceresult.repository;
 
+//**Purpose:** Spring Data JPA repository interface that provides database operations for RaceResult entities. Spring automatically implements this interface at runtime.
+
 import com.fantasyf1.fantasy_f1_api.raceresult.entity.RaceResult;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
